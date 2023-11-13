@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>RECUPERAÇÃO DE SENHA</title>
+        <div>
+        <img src="./imagem/logo.png">
+        </div>
+        <style>
+            body {
+                width: 100%;
+                height: 100vh;
+                background-color: #f6f6e9;
+                color: #1f5014;
+                font-family: Garamond;
+                font-size: 20px;
+            }
+            h1, p {
+                margin: 1em auto;
+                text-align: center;
+            }
+            fieldset {
+                border: none;
+                padding: 2rem 0;
+                border-bottom: 3px solid #86897a;
+
+            }
+            label {
+                display: block;
+                margin: 0.5rem 0;
+                text-align: center;
+            }
+            input {
+                margin: 10px 0 0 0;
+                width: 100%;
+                min-height: 2em;
+            }
+            input[type="text"] {
+                width: 35%;
+                background-color: #f6f6e9;
+                border: 1px solid #86897a;
+                color: #1f5014;
+                margin: auto;
+                display: block;
+                font-family: Century Gothic;
+                border-radius: 20px;
+            }
+            input[type="password"] {
+                width: 35%;
+                background-color: #f6f6e9;
+                border: 1px solid #86897a;
+                color: #1f5014;
+                margin: auto;
+                display: block;
+                font-family: Century Gothic;
+                border-radius: 20px;
+            }
+            input[type="checkbox"] {
+                width: 38%;
+                background-color: #c7d7bb; 
+                border: 1px solid #c7d7bb;
+                color: #1f5014;
+            }
+            input[type="submit"] {
+                display: block;
+                width: 60%;
+                margin: 1em auto;
+                height: 2em;
+                font-size: 1.1rem;
+                background-color: #c7d7bb;   
+                border-color: #485b3d;
+                min-width: 300px;
+            }
+            input[type="file"] {
+                padding: 1px 2px;
+            }
+            .button {
+                margin-top: 2rem;
+                margin-left: 47%;
+                margin-bottom: 2rem;
+                position: relative;
+                width: 120px;
+                height: 50px;
+                font-size: 15px;
+                background-color: #f6f6e9;
+                color: #1f5014;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: width 0.5s;
+                border-radius: 0.5s;
+                font-family: Forum;
+                text-align: center;
+            }
+            .button * {
+                position:absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                transition: opacity 0.5s;
+            }
+            .button i {
+                opacity: 0;
+            }
+            .button:focus {
+                width: 50px;
+                background-color: #f6f6e9;
+                border-radius: 50px;
+            }
+            .button:focus span {
+                opacity: 0;
+            }
+            .button:focus i {
+                opacity: 1;
+                transition-delay: 0.5s;
+            }
+            .button:focus::after {
+                content: "✓"
+            }
+            input[type="checkbox"] {
+                margin-right: -100px;
+            }
+            .form {
+                background-color: #c7d7bb; 
+                padding: 10px;
+                width: 50%;
+                border-radius: 10px;
+                margin: auto;
+                padding: auto;
+            }
+            img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 20%;
+}
+button:hover {
+  background-color: #c7d7bb;
+  border-color: #c7d7bb;
+  color:#1f5014;
+  cursor: pointer;
+  box-shadow: 0 8px 15px #8b9f7b;
+  transform: translateY(-2px);
+}
+button:active {
+box-shadow: none;
+transform: translateY(0);
+}
+
+        </style>
+      </head>
+      <body>
+        <div class="form">
+        <h1>Nova Senha</h1>
+        <p>Por favor, preencha todos os campos.</p>
+        <fieldset>
+            <label for="nome">Nome: <input id="nome" name="nome" type="text" required /></label>
+            <label for="email">Email: <input id="email" name="email" type="text" required /></label>
+            <label for="cpf">CPF: <input id="CPF" name="CPF" type="text" required /></label>
+            <label for="nova senha">NOVA SENHA <input id="novasenha" name="novasenha" type="text" required /></label>
+            <label for="usuario">Codigo de verificação <input id="usuario" name="usuario" type="text" required /></label>
+
+        </fieldset>
+        <fieldset>
+            <label class="quadrado" for="terms-and-conditions">
+                <input id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" class="inline" />Eu aceito os termos e condições. 
+            </label>
+        </fieldset>
+            <button class="button">
+                <span class="text" onclick="valida()">Cadastrar</span>
+                <i class="fa-solid fa-check"></i>
+            </button>
+        </div>
+        <script>
+            function valida() {
+                resolvaCPF(document.getElementById("CPF").value);
+                function resolvaCPF(CPFarray) {
+                //  4  6  2  9  2  2  9  1  8 3 9
+                // 10  9  8  7  6  5  4  3  2
+                // 40+54+16+63+12+10+36+03+16=250
+               
+                sum=CPFarray[0]*10;
+                console.log(sum);
+                sum+=CPFarray[1]*9;
+                console.log(sum);
+                sum+=CPFarray[2]*8;
+                console.log(sum);
+                sum+=CPFarray[3]*7;
+                console.log(sum);
+                sum+=CPFarray[4]*6;
+                console.log(sum);
+                sum+=CPFarray[5]*5;
+                console.log(sum);
+                sum+=CPFarray[6]*4;
+                console.log(sum);
+                sum+=CPFarray[7]*3;
+                console.log(sum);
+                sum+=CPFarray[8]*2;
+                console.log(sum);
+                remainder = (sum%11);
+                console.log(remainder);
+                if(remainder <2){
+                    dig1=0;
+                } else {
+                    dig1=11-remainder;
+                }
+        
+                if (dig1!=CPFarray[9]){
+                    alert("PRIMEIRO DIGITO ERRADO");
+                } else {
+        
+                }
+        
+                sum=CPFarray[0]*11;
+                sum+=CPFarray[1]*10;
+                sum+=CPFarray[2]*9
+                sum+=CPFarray[3]*8;
+                sum+=CPFarray[4]*7;
+                sum+=CPFarray[5]*6;
+                sum+=CPFarray[6]*5;
+                sum+=CPFarray[7]*4;
+                sum+=CPFarray[8]*3;
+                sum+=CPFarray[9]*2;
+               
+                remainder=(sum%11);
+                if(remainder <2){
+                    dig2=0;
+                } else {
+                    dig2=11-remainder;
+                }
+        
+                if (dig2!=CPFarray[10]){
+                    alert("SEGUNDO DIGITO ERRADO");
+                } else {
+                     location.href="./login.html";
+                }
+            }
+        }
+         </script>
+      </body>
+</html>

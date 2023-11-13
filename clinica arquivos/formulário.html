@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+    <head>
+<meta charset="UTF-8">
+<title>Formulário</title>
+
+    <img src="./imagem/logo.png">
+<div style="width: 500px; margin-top: 100; margin-left: 400px; text-align: center;">
+    <h2>Formulário</h2>
+    <p> Preencha esses campos para agendar sua consulta</p>
+<form method="get" action="calendario.html">
+        <input type="text" name="Nome" placeholder="Nome">
+        <P></P>
+        <input type="number" name="Idade" placeholder="Idade">
+        <p></p>
+        <input type="number" in="0" max="200" step=".5" name="Altura" placeholder="Altura">
+        <p></p>
+        <input type="number" min="0" max="200" step=".5" name="Peso" placeholder="Peso">
+        <p></p>
+        <legend>Possui alguma doença crônica?</legend>
+        <label><input id="sim" class="checkbox" type="radio" name="Doenças" value="sim"> Sim</label>
+        <label><input id="não" class="checkbox" type="radio" name="Doenças" value="não"> Não</label>
+        <p></p>
+        <legend>Se sim, qual?</legend>
+        <input id="doença" type="checkbox" class="checkbox" name="doença" value="doença" checked> <label for="doença">Doenças cardiovasculares</label>
+        <p></p>
+        <input id="doença" type="checkbox" class="checkbox" name="doença" value="doença"> <label for="doença">Doenças respiratórias</label>
+        <p></p>
+        <input id="doença" type="checkbox" class="checkbox" name="doença" value="doença"> <label for="doença">Hipertensão</label>
+        <p></p>
+        <input id="doença" type="checkbox" class="checkbox" name="doença" value="doença"> <label for="doença">Cancêr<picture>
+        <p></p>
+        <input id="doença" type="checkbox" class="checkbox" name="doença" value="doença"> <label for="doença">Diabetes</label>
+        <P></P>
+        <input id="doença" type="checkbox" class="checkbox" name="doença" value="doença"> <label for="doença">Doenças metábolicas</label>
+        <p></p>
+        <legend>Tem alergia a algum medicamento?</legend>
+        <label><input id="sim" class="checkbox" type="radio" name="alergia" value="sim"> Sim</label>
+        <label><input id="não" class="checkbox"  type="radio" name="alergia" value="não"> Não</label>
+        <p></p> 
+        <input type="text" name="qual" placeholder="Se sim qual?">
+        <p></p>
+        <legend>Já fez alguma cirurgia?</legend>
+        <label><input id="sim" type="radio" class="checkbox" name="cirurgia" value="sim"> Sim</label>
+        <label><input id="não" type="radio" class="checkbox" name="cirurgia" value="não"> Não</label>
+        <p></p>
+        <button class="button">Enviar
+            <i class="fa-solid fa-check"></i>
+</button>
+</form>
+<style>
+ body {
+        background: #f6f6e9;
+        font-family: Garamond;
+        color: black;  
+        text-align: center;
+        font-size: 20px;
+        margin-right: 50px;
+       
+}
+div{
+        background-color: #c7d7bb;
+        border-radius: 10px;
+        padding: 10px;
+}
+img {
+    width: 250px;
+    margin-left: 70px;
+}
+button {
+    width: 90px;
+    height: 30px;
+}
+.button {
+                margin-top: 2rem;
+                margin-left: 47%;
+                margin-bottom: 2rem;
+                position: relative;
+                width: 120px;
+                height: 50px;
+                font-size: 15px;
+                background-color: #f6f6e9;
+                color: #1f5014;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: width 0.5s;
+                border-radius: 0.5s;
+                font-family: Forum;
+                text-align: center;
+            }
+            .button * {
+                position:absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                transition: opacity 0.5s;
+            }
+            .button i {
+                opacity: 0;
+            }
+            .button:focus {
+                width: 50px;
+                background-color: #f6f6e9;
+                border-radius: 50px;
+            }
+            .button:focus span {
+                opacity: 0;
+            }
+            .button:focus i {
+                opacity: 1;
+                transition-delay: 0.5s;
+            }
+            .button:focus::after {
+                content: "✓"
+            }
+input[type="text"] {
+                width: 50%;
+                height: 30px;
+                background-color: #f6f6e9;
+                border: 1px solid #86897a;
+                color: #1f5014;
+                margin: auto;
+                display: block;
+                font-family: Century Gothic;
+                border-radius: 5px;
+}
+input[type="number"] {
+                width: 50%;
+                height: 30px;
+                background-color: #f6f6e9;
+                border: 1px solid #86897a;
+                color: #1f5014;
+                margin: auto;
+                display: block;
+                font-family: Century Gothic;
+                border-radius: 5px;
+}
+button:hover {
+  background-color: #c7d7bb;
+  border-color: #c7d7bb;
+  color:#1f5014;
+  cursor: pointer;
+  box-shadow: 0 8px 15px #8b9f7b;
+  transform: translateY(-2px);
+}
+button:active {
+box-shadow: none;
+transform: translateY(0);
+}
+.checkbox{
+width: 25px;
+height: 25px;
+}
+
+</style>

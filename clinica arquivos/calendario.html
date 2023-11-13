@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<style>
+    h2{
+    font-size: 300%;
+    }
+    body{
+        background-color: #f6f6e9;
+    }
+    table {
+        background-color: #c7d7bb;
+        border-radius: 20px;
+    }
+    th{
+        font-size: 150%;
+        text-align: center;
+    }
+    .ocupado{
+        background-color: rgb(232, 89, 89)  ;
+        border-radius: 20px;
+    }
+    td{
+        padding: 2%;
+        text-align: center;
+    }
+    div{
+        background-color: #c7d7bb;
+        margin: 5%;
+        margin-left: 35%;
+        margin-right: 70%;
+        width: 25%;
+        height: 10%;
+        font-size: 140%;
+        font-family: century 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        border-radius: 20px;
+        padding: 2%;
+        text-align: center;
+    }
+    .data{
+        background-color: #f6f6e9;
+        border-radius: 20px;
+        width: 20%;
+        height: 10%;
+        font-size: 140%;
+        text-align: center;
+    }
+    button{
+    width: 50%;
+    font-size: 10px;
+    border-radius: 20px; 
+    font-size: 100%;
+    background-color:  #1f5014;
+    color:#f6f6e9;
+    margin-left: 7%;
+    font-family: century gothic;
+}
+button:hover {
+  background-color: #c7d7bb;
+  border-color: #c7d7bb;
+  color:#1f5014;
+  cursor: pointer;
+  box-shadow: 0 8px 15px #8b9f7b;
+  transform: translateY(-2px);
+}
+button:active {
+box-shadow: none;
+transform: translateY(0);
+}
+</style>
+<body>
+    
+    <h2 align="center" style="color: #1f5014;">
+        Maio de 2023 
+    </h2>
+    <table  align="center" 
+        cellspacing="21" cellpadding="21">
+          
+        
+        <caption align="top">
+           
+        </caption>
+        <thead>
+            <tr>
+                <th>Dom</th>
+                <th>Seg</th>
+                <th>Ter</th>
+                <th>Quar</th>
+                <th>Quin</th>
+                <th>Sexta</th>
+                <th>Sab</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+             
+                <td></td>
+                <td class="ocupado">1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td class="ocupado">5</td>
+                <td>6</td>
+            
+            </tr>
+            
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td class="ocupado">9</td>
+                <td>10</td>
+                <td>11</td>
+                <td class="ocupado">12</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td class="ocupado">15</td>
+                <td>16</td>
+                <td>17</td>
+                <td class="ocupado">18</td>
+                <td>19</td>
+                <td class="ocupado">20</td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td class="ocupado">22</td>
+                <td>23</td>
+                <td class="ocupado">24</td>
+                <td>25</td>
+                <td>26</td>
+                <td>27</td>
+            </tr>
+            <tr>
+                <td>28</td>
+                <td>29</td>
+                <td class="ocupado">30</td>
+                <td>31</td>
+               
+        </tbody>
+    </table>
+</body>
+  <div>
+   
+    <label type="text">Marcar Data:</label>
+    <input type="number" min="1" max="31" id="data" class="data"><br><br>
+    <button class="button" onclick="data()">Confirmar</button>
+    <script>
+    function data(){
+        dataarray=[];
+        vejadata(document.getElementById("data").value);
+        function vejadata(dataarray){
+            console.log(dataarray);
+            if (dataarray==1) {
+            alert("OCUPADO");
+            } 
+               
+            if (dataarray==5){
+            alert("OCUPADO");
+            }
+            if (dataarray==9){
+            alert("OCUPADO");
+            }
+            if (dataarray==12){
+            alert("OCUPADO");
+            }
+            if (dataarray==15){
+            alert("OCUPADO");
+            }
+            if (dataarray==18){
+            alert("OCUPADO");
+            }
+
+            if (dataarray==20){
+            alert("OCUPADO");
+            }
+
+            if (dataarray==22){
+            alert("OCUPADO");
+            }
+
+            if (dataarray==24){
+            alert("OCUPADO");
+            }
+
+            if (dataarray==30){
+            alert("OCUPADO");
+            }
+
+            if (dataarray==2) {
+            alert("CONFIRMADO");
+            } 
+               
+            if (dataarray==3){
+            alert("CONFIRMADO");
+            }
+            if (dataarray==4){
+            alert("CONFIRMADO");
+            }
+            if (dataarray==6){
+            alert("CONFIRMADO");
+            }
+            if (dataarray==7){
+            alert("CONFIRMADO");
+            }
+            if (dataarray==8){
+            alert("CONFIRMADO");
+            }
+
+            if (dataarray==10){
+            alert("CONFIRMADO");
+            }
+
+            if (dataarray==11){
+            alert("CONFIRMADO");
+            }
+
+            if (dataarray==13){
+            alert("CONFIRMADO");
+            }
+
+            if (dataarray==14){
+            alert("CONFIRMADO");
+            }
+            if (dataarray==16){
+            alert("CONFIRMADO");
+            }
+            if (dataarray==17){
+            alert("CONFIRMADO");
+            }
+            if (dataarray==19){
+            alert("CONFIRMADO");
+            }
+            if (dataarray==21){
+            alert("CONFIRMADO");
+            }
+
+            if (dataarray==23){
+            alert("CONFIRMADO");
+            }
+
+            if (dataarray==25){
+            alert("CONFIRMADO");
+            }
+
+            if (dataarray==26){
+            alert("CONFIRMADO");
+            }
+
+            if (dataarray==27){
+            alert("CONFIRMADO");
+            }
+            if (dataarray==28){
+            alert("CONFIRMADO");
+            }
+
+            if (dataarray==29){
+            alert("CONFIRMADO");
+            }
+
+            if (dataarray==31){
+            alert("CONFIRMADO");
+            }
+        }
+    }
+        </script>
+  </div>
+  
+</html>

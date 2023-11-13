@@ -1,0 +1,172 @@
+<DOCTYPE html>
+    <meta charset="uft-8">
+<html>
+    <head>
+        
+        <title>Exames</title>
+        
+     <div style="width: 500px; margin-top: 100px; margin-left: 400px; text-align: center;">
+    </head>
+        <BODY>
+            <h1>Exames</H1>
+                <label for="Usuario" class="cor">CPF: <inupt id="a" name="a" type="text" required/></label>
+                <input type="Usuario" id="CPF" name="a" required> <br><br>
+                <label for="Exame" class="cor">Exame: <inupt id="Exame" name="Exame" required/></label>
+                <input type="text" class="text" id="a" name="a" required>
+
+           <button class="button"
+            type="button" onclick="valida()">Resultados</button>  
+           <i class="fa-solid fa-check"></i>
+        </button> 
+        
+ <script>
+    function valida() {
+        resolvaCPF(document.getElementById("CPF").value);
+        function resolvaCPF(CPFarray) {
+        //  4  6  2  9  2  2  9  1  8 3 9
+        // 10  9  8  7  6  5  4  3  2
+        // 40+54+16+63+12+10+36+03+16=250
+        
+        sum=CPFarray[0]*10;
+        console.log(sum);
+        sum+=CPFarray[1]*9;
+        console.log(sum);
+        sum+=CPFarray[2]*8;
+        console.log(sum);
+        sum+=CPFarray[3]*7;
+        console.log(sum);
+        sum+=CPFarray[4]*6;
+        console.log(sum);
+        sum+=CPFarray[5]*5;
+        console.log(sum);
+        sum+=CPFarray[6]*4;
+        console.log(sum);
+        sum+=CPFarray[7]*3;
+        console.log(sum);
+        sum+=CPFarray[8]*2;
+        console.log(sum);
+        remainder = (sum%11);
+        console.log(remainder);
+        if(remainder <2){
+            dig1=0;
+        } else {
+            dig1=11-remainder;
+        }
+
+        if (dig1!=CPFarray[9]){
+            alert("CPF ERRADO");
+        } else {
+
+        }
+
+        sum=CPFarray[0]*11;
+        sum+=CPFarray[1]*10;
+        sum+=CPFarray[2]*9
+        sum+=CPFarray[3]*8;
+        sum+=CPFarray[4]*7;
+        sum+=CPFarray[5]*6;
+        sum+=CPFarray[6]*5;
+        sum+=CPFarray[7]*4;
+        sum+=CPFarray[8]*3;
+        sum+=CPFarray[9]*2;
+        
+        remainder=(sum%11);
+        if(remainder <2){
+            dig2=0;
+        } else {
+            dig2=11-remainder;
+        }
+
+        if (dig2!=CPFarray[10]){
+            alert("CPF ERRADO");
+        } else {
+            location.href="./resultados.html";;
+
+        }
+    }
+} 
+ </script>
+    </BODY>
+    <style>
+        .cor{
+            color:black
+        }
+        body{
+    background-color: #f6f6e9;
+    font-family: garamond;
+    font-size: 20px;
+    color: #1f5014;
+}
+button {
+    margin-left: 20%;
+    position: relative;
+    width: 10%;
+    height: 10%;
+    background-color: #1f5014;
+    color:white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: width 0.5s ;   
+    font-size: 100%;
+    margin-top: 10%;
+    font-family: century; 
+    
+}
+.button {
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.5s;
+}
+
+.button i{
+    opacity: 0;
+}
+
+.button:focus {
+    width: 10%;
+    background-color:#f6f6e9;
+    border-radius: 50px;
+
+}
+
+.button:focus span{
+    opacity: 0;
+
+}
+
+.button:focus i{
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+
+div {
+    background-color: #c7d7bb;
+    padding: 5%;
+    width: 60%;
+    height: 50%;
+    border-radius: 20px;
+    border-color: black;
+    
+   
+  }
+input{
+    background-color: #f6f6e9;
+    border-radius: 10px;
+    font-family: century 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #1f5014;
+    border: #86897a;
+    width: 300px;
+    height: 30px;
+}
+.exame {
+    margin-right: 1%;
+}
+text{
+    margin-right: 0; 
+}
+
+    </style>
+</html>

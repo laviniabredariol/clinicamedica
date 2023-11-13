@@ -1,0 +1,76 @@
+body{
+    background-color: #f6f6e9;
+    font-family: garamond;
+    font-size: 20px;
+    color: #1f5014;
+}
+
+.button {
+    margin-left: 100px;
+    position: relative;
+    width: 70px;
+    height: 30px;
+    font-size: 10px;
+    background-color: #f6f6e9;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: width 0.5s ;   
+    font-size: 20px;
+    margin-top: 50px;
+    
+}
+.button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.5s;
+}
+
+.button i{
+    opacity: 0;
+}
+
+.button:focus {
+    width: 30px;
+    background-color:#f6f6e9;
+    border-radius: 50px;
+
+}
+
+.button:focus span{
+    opacity: 0;
+
+}
+
+.button:focus i{
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+
+.esqueci{
+    margin: auto;
+    margin-left: 130px;
+    margin-top: 110px;
+    background-color: #f6f6e9;
+    border-radius: 0.5s;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+}
+div {
+    background-color: #c7d7bb;
+    padding: 10px;
+    width: 60%;
+    border-radius: 10px;
+    border-color: black;
+  }
+input{
+    background-color: #f6f6e9;
+    border-radius: 20px;
+    font-family: century 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #1f5014;
+    border: #86897a;
+}

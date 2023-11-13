@@ -1,0 +1,77 @@
+body {
+    background-color: #f6f6e9;
+    border-color: #f6f6e9;
+  }
+
+  h2, h3 {
+    color: #1f5014;
+  }
+
+  h2, h3 {
+  text-align: center;
+  }
+
+h2, h3, p {
+  font-family: Forum; 
+}
+
+h2 {
+  font-size: 50px;
+}
+ 
+h3 {
+  font-size: 30px;
+  margin-bottom: 70px;
+}
+
+p {
+  margin-left: 70px;
+  font-size: 25px;
+  color: #272727; 
+}
+
+
+div {
+  display: inline-block;
+  margin-left: 325px;
+  margin-top: -2px;
+  margin-right: 10px;
+}
+
+p {
+  font-size: 20px;
+}
+.Nossos {
+    font-weight: bold; 
+}
+.serviços{
+  font-weight: bold; 
+}
+button{
+  width: 150px;
+  height: 50px;
+  border-radius: 30px; 
+  font-size: 15px;
+  background-color:  #1f5014;
+  color:#f6f6e9;
+  margin-left: 20px;
+  font-family: century gothic;
+}
+
+img{
+  width: 400px;
+margin-left: 700px;
+border-radius: 20px;
+}
+button:hover {
+  background-color: #c7d7bb;
+  border-color: #c7d7bb;
+  color:#1f5014;
+  cursor: pointer;
+  box-shadow: 0 8px 15px #8b9f7b;
+  transform: translateY(-2px);
+}
+button:active {
+box-shadow: none;
+transform: translateY(0);
+}

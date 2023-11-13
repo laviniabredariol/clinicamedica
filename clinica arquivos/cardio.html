@@ -1,0 +1,134 @@
+<?php
+          ini_set('default_charset','UTF-8');
+          ?>
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta chaset="UTF-8">
+            <title>Cardiologia</title>
+            <style>
+                .container {
+                  position: relative;
+                }
+                .center {
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  font-size: 150%;
+                  font-family: Garamond;
+                  color: #1f5014;
+                  font-weight: bold;
+                }
+                img { 
+                  text-align: center;
+                  display:block;
+                    width: 40%;
+                  height: auto;
+                  opacity: 0.3;
+                  margin-left: 30%;
+                  border-radius: 20px;
+                }
+                p {
+                    text-align: justify;
+                    font-size: 130%;
+                    color:#1f5014;
+                    padding: 2% 3%;
+                }
+                .column {
+                    float: left;
+                    width: 500px;
+                    margin-left:50px; 
+                    margin-top:20px;
+                    padding: 5px;
+                }
+                .row::after {
+                    content: "";
+                    display: table;
+                    clear: both;
+                   
+                }
+                .quadrado1 {
+                  background: #c7d7bb;
+                  width: 47%;
+                  height: 320px;
+                  margin-top: -360px;
+                  border-radius: 20px;
+                  
+                }
+                .quadrado2 {
+                  background: #c7d7bb;
+                  width: 560px;
+                  height: 320px;
+                  margin-top: -320px;
+                  margin-left: 590px;
+                  border-radius: 20px;
+                }
+                button{
+                width: 150px;
+    height: 50px;
+    border-radius: 30px; 
+    font-size: 15px;
+    background-color:  #1f5014;
+    color:#f6f6e9;
+    margin-left: 20px;
+    font-family: century gothic;
+}
+button:hover {
+  background-color: #c7d7bb;
+  border-color: #c7d7bb;
+  color:#1f5014;
+  cursor: pointer;
+  box-shadow: 0 8px 15px #8b9f7b;
+  transform: translateY(-2px);
+}
+button:active {
+box-shadow: none;
+transform: translateY(0);
+}
+
+                button:hover {
+                  background-color: #f6f6e9;
+                  border-color: #f6f6e9;
+                  color: #1f5014;
+                }
+                h2 {
+                  color:#1f5014;
+                }
+                body{
+                  background-color: #f6f6e9;
+                }
+              
+                </style>
+                </head>
+                <body>
+                
+                <div class="container">
+                  <img src="./imagem/coracao.jfif" alt="cardio" width="1000" height="300">
+                  <div class="center">Cardiologia</div>
+                </div>
+                <p>   A cardiologia em si é definida como um ramo da medicina responsável por estudar, cuidar e tratar o coração e os vasos sanguíneos. Ou seja, é uma das especialidades da medicina que cuida do coração e do sistema circulatório.
+                    A cardiologia é principalmente dividida em duas grandes áreas, assim como toda a medicina: a preventiva e a curativa.</p>
+                    <div class="row">
+                        <div class="column">
+                          <h2>Cardiologia preventiva</h2>
+                          <p>A cardiologia preventiva é voltada para a atenção de prevenção de doenças cardíacas ou do sistema circulatório.
+                            A sua importância é justamente de cuidado com os problemas cardíacos. Isso tendo em vista que a tendência é que as doenças cardiovasculares sejam um problema ainda maior no futuro.
+                            Por isso, a cardiologia preventiva trabalha exatamente com a prevenção dos problemas cardiovasculares, a fim de evitar maiores complicações e mais graves.</p>
+                        </div>
+                      
+                        <div class="column">
+                            <h2>Cardiologia curativa</h2>
+                            <p>Já a cardiologia curativa, como o nome já diz, tem o foco voltado para a cura e o tratamento das doenças. Sejam elas desenvolvidas com o tempo, ou congênitas.
+                                A partir disso, é fundamentado no estudo dos sintomas das doenças para seu diagnóstico.
+                                Assim, a cardiologia curativa acontece sempre que um paciente apresenta algum sintoma relacionado à doenças cardiovasculares. Para, então, poder diagnosticar e tratar o problema.</p>
+                          </div>
+                        </div>
+                        <div class="quadrado1"></div>
+                        <div class="quadrado2"></div>
+                        <p style="margin-right: 900px; font-size: 18px; font-family: Garamond; font-weight: bold; color:#1f5014">Nossos profissionais:</p>
+                        <button style="margin-right: 600px;" onclick="window.location.href='gina.html'">Gina Santiago</button><br>
+                        <button style="margin-top: 5px;" onclick="window.location.href='charles.html'" >Charles Pimento</button>
+                        </div>
+                </body>
+                </html>
